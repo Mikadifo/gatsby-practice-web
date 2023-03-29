@@ -12,7 +12,7 @@ const IndexPage = () => {
           src="../images/icon.png"
           className="w-20 h-20 animate-spin hover:animate-none"
         />
-        <p className="text-blue-600 self-center">
+        <p className="text-blue-600 self-center dark:text-blue-100 text-left">
           Learning Gatsby to migrate my old personal website here.
         </p>
       </div>

@@ -10,13 +10,13 @@ const BlogPage = ({ data }) => {
         {data.allMdx.nodes.map((node) => (
           <article
             key={node.id}
-            className="border-2 border-violet-400 rounded p-3 drop-shadow-2xl flex flex-col"
+            className="border-2 border-violet-400 rounded p-3 drop-shadow-2xl flex flex-col dark:text-white"
           >
             <h2 className="text-xl font-semibold">{node.frontmatter.title}</h2>
             <p>{node.frontmatter.date}</p>
             <p className="text-start my-5">{node.excerpt}</p>
             <button
-              className="p-2 mt-auto w-full rounded-md bg-gradient-to-r from-violet-300 to-fuchsia-300 text-sm font-semibold opacity-75 drop-shadow hover:opacity-100"
+              className="p-2 mt-auto w-full rounded-md bg-gradient-to-r from-violet-300 to-fuchsia-300 text-sm font-semibold opacity-75 drop-shadow hover:opacity-100 text-black"
               onClick={() => navigate(`/blog/${node.frontmatter.slug}`)}
             >
               Read post

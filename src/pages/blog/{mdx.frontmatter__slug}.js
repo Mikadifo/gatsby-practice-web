@@ -9,7 +9,7 @@ const BlogPost = ({ data, children }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p className="text-start mb-5 text-md">
+      <p className="text-start mb-5 text-md dark:text-white">
         Posted by {data.mdx.frontmatter.author} on {data.mdx.frontmatter.date}
       </p>
       <GatsbyImage
@@ -17,7 +17,7 @@ const BlogPost = ({ data, children }) => {
         alt={data.mdx.frontmatter.hero_image_alt}
         className="w-full h-80 drop-shadow-xl mb-2"
       />
-      <p className="text-sm mb-5">
+      <p className="text-sm mb-5 dark:text-white">
         Photo Credit:{" "}
         <a
           href={data.mdx.frontmatter.hero_image_credit_link}
@@ -27,7 +27,9 @@ const BlogPost = ({ data, children }) => {
         </a>
       </p>
       <div className="flex justify-center">
-        <article className="prose prose-lg text-start">{children}</article>
+        <article className="prose prose-lg text-start dark:prose-invert">
+          {children}
+        </article>
       </div>
     </Layout>
   );
